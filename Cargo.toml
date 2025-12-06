@@ -1,0 +1,36 @@
+[package]
+name = "p2p_core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libp2p = { version = "0.56", features = ["dns", "tokio", "noise", "yamux", "identify", "kad", "relay", "dcutr", "ping", "request-response", "gossipsub", "serde", "autonat", "quic"] }
+tokio = { version = "1.5.0", features = ["fs", "rt", "time", "macros", "sync"] }
+futures = "0.3"
+tokio-stream = "0.1"
+tokio-util = "0.7"
+clap = { version = "4.5", features = ["derive", "env"] }
+libp2p-connection-limits = "0.6.0"
+libp2p-swarm-derive = "0.35"
+bincode = "2.0"
+lru = "0.16"
+futures-core = "0.3"
+futures-bounded = { vesion = "0.3.0", features = ["tokio"] }
+bimap = "0.6"
+parking_lot = "0.12"
+derivative = "2"
+anyhow = "1.0"
+log = "0.4"
+async-trait = { workspace = true }
+serde = { version = "1.0", features = ["derive"] }
+serde_with = "3"
+thiserror = "2"
+env_logger = "0.11"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt", "time", "test-util"] }
+env_logger = "0.11"
+
+[features]
+default = ["whitelist"]
+whitelist = []
