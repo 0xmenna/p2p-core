@@ -15,7 +15,7 @@ libp2p-swarm-derive = "0.35"
 bincode = "2.0"
 lru = "0.16"
 futures-core = "0.3"
-futures-bounded = { vesion = "0.3.0", features = ["tokio"] }
+futures-bounded = { version = "0.3.0", features = ["tokio"] }
 bimap = "0.6"
 parking_lot = "0.12"
 derivative = "2"
